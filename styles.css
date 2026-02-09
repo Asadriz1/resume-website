@@ -1,0 +1,580 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #0a0a0a;
+    background-image: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120, 119, 198, 0.3), rgba(255, 255, 255, 0));
+    min-height: 100vh;
+}
+
+.navbar {
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #2563eb;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 3rem;
+    align-items: start;
+    margin-bottom: 3rem;
+}
+
+.profile-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.name-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.career-objective {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 4px;
+    border-left: 3px solid #2563eb;
+    margin-bottom: 2rem;
+}
+
+.career-objective h3 {
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.quick-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    border: none;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: #fff;
+}
+
+.btn-secondary {
+    background: #64748b;
+    color: #fff;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+}
+
+.highlights-section {
+    margin-top: 3rem;
+}
+
+.highlights-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.highlight-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+
+.highlight-card h4 {
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.education-timeline,
+.experience-timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.education-timeline::before,
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #2563eb;
+}
+
+.timeline-item,
+.experience-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-marker,
+.experience-marker {
+    position: absolute;
+    left: -2.5rem;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #2563eb;
+    border: 3px solid #fff;
+}
+
+.timeline-content,
+.experience-content {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+
+.timeline-date,
+.experience-date {
+    display: inline-block;
+    background: #2563eb;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content h3,
+.experience-content h3 {
+    color: #1a1a1a;
+    font-size: 1.4rem;
+    margin-bottom: 0.25rem;
+}
+
+.timeline-content h4,
+.experience-content h4 {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.gpa {
+    color: #f59e0b;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.details,
+.experience-details {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.details li,
+.experience-details li {
+    padding: 0.4rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.details li::before,
+.experience-details li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tech-tag {
+    background: #2563eb;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 3px;
+    font-size: 0.85rem;
+}
+
+.certifications-section,
+.achievements-section {
+    margin-top: 3rem;
+}
+
+.certifications-section h2,
+.achievements-section h2 {
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+}
+
+.cert-grid,
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.cert-card,
+.achievement-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+
+.cert-card h4,
+.achievement-card h4 {
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+}
+
+.cert-date {
+    display: inline-block;
+    background: #f59e0b;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.skill-category {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+
+.skill-category h3 {
+    color: #1a1a1a;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #2563eb;
+}
+
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.badge {
+    background: #fff;
+    color: #2563eb;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    font-weight: 500;
+    border: 1px solid #2563eb;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.contact-info-section h2,
+.contact-form-section h2 {
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.contact-intro {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+
+.contact-card h3 {
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+}
+
+.contact-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.location-detail {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.social-links-section {
+    margin-top: 2rem;
+}
+
+.social-links-section h3 {
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+.social-btn.linkedin {
+    background: #0077b5;
+}
+
+.social-btn.github {
+    background: #333;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #1a1a1a;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.btn-submit {
+    width: 100%;
+    cursor: pointer;
+}
+
+.availability-section {
+    margin-top: 3rem;
+}
+
+.availability-section h3 {
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.availability-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 4px;
+    border-left: 3px solid #10b981;
+}
+
+.status-indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.status-indicator.available {
+    background: #10b981;
+}
+
+.availability-info h4 {
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+}
+
+.availability-info p {
+    color: #666;
+}
+
+footer {
+    background: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+    }
+
+    .name-title {
+        font-size: 2rem;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-header {
+        flex-direction: column;
+    }
+
+    .highlights-grid,
+    .cert-grid,
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+}
